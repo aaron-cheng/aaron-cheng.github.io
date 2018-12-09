@@ -873,6 +873,10 @@ display:none;
 		width: 100%;
 	}
 
+	.home__industries__mask{
+		background-color: #000000;
+	}
+
 	.news__featured__secondary__container{
 		flex-basis: 100%;
 		width: 100%;

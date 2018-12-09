@@ -857,6 +857,7 @@ display:none;
 	}
 	.home__industries__mobile{
 		padding: 15px; 
+		background-color: #000000;
 	}
 	.home__industries__mobile h3{
 		margin-top: 32px;
@@ -871,10 +872,6 @@ display:none;
 		height: 192px;
 		flex-basis: 100%;
 		width: 100%;
-	}
-
-	.home__industries__mask{
-		background-color: #000000;
 	}
 
 	.news__featured__secondary__container{

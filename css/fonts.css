@@ -6,6 +6,7 @@
          url('/fonts/opensans_light_macroman/OpenSans-Light-webfont.ttf') format('truetype'),
          url('/fonts/opensans_light_macroman/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
     font-weight: 300;
+    font-style: normal;
 
 }
 

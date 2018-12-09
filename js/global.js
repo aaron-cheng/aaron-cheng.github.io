@@ -50,11 +50,11 @@ $(document).ready(function(){
 	    }
 	});
 
-	$(document.body).on("touchmove", function(event) {
-	    event.preventDefault();
-	    event.stopPropagation();
-	});
-
-	document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+	function disable_scroll_mobile(){
+	  document.addEventListener('touchmove',preventDefault, false);
+	}
+	function enable_scroll_mobile(){
+	  document.removeEventListener('touchmove',preventDefault, false);
+	}
 
 });

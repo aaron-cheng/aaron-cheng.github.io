@@ -219,11 +219,12 @@ The SORA 200 delivers long-range, high-resolution and low-cost mapping capabilit
 	   	$(".products__btn--watch").click(function(){
 			$(".products__video").css("display", "block");
 		});
-			
+
 	    var options = {
 	        id: 266939936,
 	        width: 1280,
-	        loop: true
+	        loop: true,
+	        playsinline: false
 	    };
 
 	    var player = new Vimeo.Player('video--sora', options);

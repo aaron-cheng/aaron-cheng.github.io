@@ -55,4 +55,6 @@ $(document).ready(function(){
 	    event.stopPropagation();
 	});
 
+	document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+
 });

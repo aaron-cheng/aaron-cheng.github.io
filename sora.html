@@ -40,7 +40,7 @@
 							</ul>
 						</li>
 						<li class="industries btn"><a href="index.html#industries">Industries</a></li>
-						<li class="about btn"><a href="index.html#about">About</a></li>
+						
 						<li class="flex-container flex--column">
 							<p class="menu__media btn">Media</p>
 							<ul class="flex-container flex--column menu__media__dropdown">
@@ -48,9 +48,15 @@
 								<li><a href="news.html">News</a></li>
 							</ul>
 						</li>
-						<li class="partners btn"><a href="index.html#partners">Partners</a></li>
-						<li class="disitributors btn"><a href="index.html#disitributors">Disitributors</a></li>
-						<li class="executives btn"><a href="index.html#executives">Executives</a></li>
+						<li class="flex-container flex--column">
+							<p class="menu__media btn">Partners</p>
+							<ul class="flex-container flex--column menu__media__dropdown">
+								<li class="partners btn"><a href="index.html#partners">Partners</a></li>
+								<li class="disitributors btn"><a href="index.html#disitributors">Disitributors</a></li>
+							</ul>
+						</li>
+						<li class="about btn"><a href="index.html#about">Team</a></li>
+
 					</ul>
 				</div>
 				<div class="col-xs-6 visible-xs visible-sm">
@@ -75,16 +81,20 @@
 			</ul>
 		</li>
 		<li class="industries btn--nav--mobile"><a href="index.html#industries">Industries</a></li>
-		<li class="about btn--nav--mobile"><a href="index.html#about">About</a></li>
 		<li><p>Media</p>
 			<ul class="menu__media--mobile">
 				<li><a href="events.html">Events</a></li>
 				<li><a href="news.html">News</a></li>
 			</ul>
 		</li>
-		<li class="partners btn--nav--mobile"><a href="index.html#partners">Partners</a></li>
-		<li class="disitributors btn--nav--mobile"><a href="index.html#disitributors">Disitributors</a></li>
-		<li class="executives btn--nav--mobile"><a href="index.html#executives">Executives</a></li>
+		<li><p>Media</p>
+			<ul class="menu__media--mobile">
+				<li class="partners btn--nav--mobile"><a href="events.html">Partners</a></li>
+				<li class="disitributors btn--nav--mobile"><a href="news.html">Disitributor</a></li>
+			</ul>
+		</li>		
+		<li class="about btn--nav--mobile"><a href="index.html#about">About</a></li>
+
 	</ul>
 
 	<div class="container-fluid">
@@ -96,7 +106,7 @@
 							<div class="col-sm-4 col-sm-offset-1">
 								<h1 class="txt--xxl ">SORA 200</h1>
 								<p class="margin--element_top_xs">The lightest high-performance LiDAR for UAV.</br></br></p>
-								<div class="btn btn--highlight flex-container products__btn--watch products__btn--watch--hr80 margin--element_top_xs">
+								<div class="btn btn--highlight flex-container products__btn--watch products__btn--watch--sora margin--element_top_xs">
 									<img src="img/products/icon-play@2x.png"> <p>Watch Video</p> 
 								</div>
 							</div>
@@ -143,7 +153,8 @@
 	<div class="products__video">
 		<div class="flex-container flex--column products__video__container">
 			<div class="btn--video-close pull-right btn"><img src="img/global/icon-close.png" class="img-responsive" alt="Close"></div>
-			<iframe src="https://player.vimeo.com/video/266939936" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<!-- <iframe src="https://player.vimeo.com/video/266939936?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+			<div id="video--sora" class="products__video--link"></div>
 		</div>
 	</div>
 
@@ -193,40 +204,38 @@ The SORA 200 delivers long-range, high-resolution and low-cost mapping capabilit
 	<script src="js/bootstrap.slider.js"></script>
 <!-- 	<script src="js/bootstrap.min.js"></script> -->
 	<script src="js/global.js" type="text/javascript"></script> 
-	
+	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script>	
+		// if ($(window).width() < 576) {
+		//     $(".products__btn--watch").click(function(){
+		// 		window.open('https://vimeo.com/266939936', '_blank');
+		// 	});
+		// }else {
+		//    	$(".products__btn--watch").click(function(){
+		// 		$(".products__video").css("display", "block");
+		// 	});
+		// }
 
-	$(".btn--nav__menu").click(function(){
-		$(".nav--mobile").css("display", "block");
-		$(".btn--nav__btn--close").css("display", "block");
-		$(".btn--nav__menu").css("display", "none");
-	});
+	    var options = {
+	        id: 266939936,
+	        width: 1280,
+	        loop: true
+	    };
 
-	$(".btn--nav__btn--close").click(function(){
-		$(".nav--mobile").css("display", "none");
-		$(".btn--nav__btn--close").css("display", "none");
-		$(".btn--nav__menu").css("display", "block");
-	});
+	    var player = new Vimeo.Player('video--sora', options);
 
-	$(".btn--nav--mobile").click(function(){
-		$(".nav--mobile").css("display", "none");
-		$(".btn--nav__btn--close").css("display", "none");
-		$(".btn--nav__menu").css("display", "block");
-	});
+	    player.on('play', function() {
+	        console.log('played the video!');
+	    });
 
-	$(".btn--video-close").click(function(){
-		$(".products__video").css("display", "none");
-	});
-
-	if ($(window).width() < 576) {
-	    $(".products__btn--watch").click(function(){
-			window.open('https://vimeo.com/266939936', '_blank');
+		$(".products__btn--watch--sora").click(function(){
+			$("html, body").css("overflow", "hidden");
+			player.play();
 		});
-	}else {
-	   	$(".products__btn--watch").click(function(){
-			$(".products__video").css("display", "block");
+		$(".btn--video-close").click(function(){
+			player.pause();
+			$("html, body").css("overflow", "visible");
 		});
-	}
 	</script>
 </body>
 </html>

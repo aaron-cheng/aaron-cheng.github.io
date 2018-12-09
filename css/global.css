@@ -486,6 +486,10 @@ q {
 	display: none;
 }
 
+.partners.btn{
+	text-align: left;
+}
+
 .nav--mobile{
 	position: fixed;
 	top: 0px;
@@ -539,12 +543,13 @@ footer{
 }
 
 .home__video{
-	height: 600px;
+	/*height: 600px;*/
+	object-fit: cover;
 }
 
 .home__video__title{
 	position: absolute;
-	bottom: 32px;
+	bottom: 128px;
 	width: 100%;
 	text-align: center;
 }
@@ -588,7 +593,6 @@ footer{
 .home__industries{
 	flex-wrap: wrap;
 	position: relative;
-	cursor: pointer;
 }
 
 .home__industries__subtitle{
@@ -617,17 +621,17 @@ footer{
 	position: relative;
 }
 
-.home__industries__industry:hover .home__industries__description{
+/*.home__industries__industry:hover .home__industries__description{
 	display: block;
-}
+}*/
 
 .home__industries__btn{
 	width: 104px;
 }
 
-.home__industries__industry:hover .home__industries__mask{
+/*.home__industries__industry:hover .home__industries__mask{
 	display: block;
-}
+}*/
 
 .home__industries__mobile{
 	position: fixed;
@@ -735,6 +739,10 @@ footer{
 	margin-left: auto;
 }
 
+.products__video--link{
+	width: 100%;
+	height: 100%;
+}
 /*----------------------------------------------
 ------------------------------------------------
 9. Page Style - Events
@@ -938,5 +946,9 @@ display:none;
 }
 
 @media (min-width: 767px) { 
+
+}
+
+@media (min-width: 992px) { 
 
 }

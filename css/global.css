@@ -581,6 +581,23 @@ footer{
 	line-height: 32px;
 }
 
+.home__banner{
+	top: -6px;
+	position: relative;
+}
+
+.home__banner .flex-container{
+	align-items: center;
+	height: 72px;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.home__banner img{
+	height: 40px;
+	margin-right: 24px;
+}
+
 .home__products__btn{
 	width: 104px;
 }
@@ -772,6 +789,10 @@ footer{
 	display: none;
 }
 
+
+
+
+
 /*----------------------------------------------
 ------------------------------------------------
 10. Page Style - News
@@ -829,6 +850,19 @@ display:none;
 	.home__video{
 		height: auto;
 		margin-top: 48px;
+	}
+
+	.home__banner .flex-container{
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		padding: 16px 4px 16px 4px;
+	}
+
+	.home__banner img{
+		margin-right: 0;
+		margin-bottom: 8px;
+		height: 48px;
 	}
 	.txt--xxl{
 		font-size: 24px;
@@ -944,6 +978,13 @@ display:none;
 	.home__heroImg__text{
 		margin-top: 120px;
 	}
+
+	.events__pastEvent .col-sm-6:nth-child(2n+1) {
+		clear: left;
+	}
+	.events__upcomingEvent .col-sm-6:nth-child(2n+1) {
+		clear: left;
+	}
 }
 
 @media (min-width: 767px) { 
@@ -951,5 +992,10 @@ display:none;
 }
 
 @media (min-width: 992px) { 
-
+	.events__pastEvent .col-md-4:nth-child(3n+1) {
+		clear: left;
+	}
+	.events__upcomingEvent .col-md-4:nth-child(3n+1) {
+		clear: left;
+	}
 }

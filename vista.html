@@ -220,15 +220,15 @@ The Vista sensor is the fourth LiDAR product developed by the fast paced Cepton 
 	<script src="js/global.js" type="text/javascript"></script> 
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script>	
-		if ($(window).width() < 576) {
+		// if ($(window).width() < 576) {
 		 //    $(".products__btn--watch").click(function(){
 			// 	window.open('https://vimeo.com/261965022', '_blank');
 			// });
-		}else {
-		   	$(".products__btn--watch").click(function(){
-				$(".products__video").css("display", "block");
-			});
-		}
+		// }else {
+		//    	$(".products__btn--watch").click(function(){
+		// 		$(".products__video").css("display", "block");
+		// 	});
+		// }
 	 //   	$(".products__btn--watch").click(function(){
 		// 	$(".products__video").css("display", "block");
 		// });
@@ -244,6 +244,10 @@ The Vista sensor is the fourth LiDAR product developed by the fast paced Cepton 
 	    player.on('play', function() {
 	        console.log('played the video!');
 	    });
+
+    	$(".products__btn--watch").click(function(){
+			$(".products__video").css("display", "block");
+		});
 
 		$(".products__btn--watch--vista").click(function(){
 			$("html, body").css("overflow", "hidden");

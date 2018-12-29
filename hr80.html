@@ -227,15 +227,15 @@ Both the HR80T and HR80W feature a patented frictionless micro-motion technology
 	<script src="js/global.js" type="text/javascript"></script> 
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script>	
-		if ($(window).width() < 576) {
+		// if ($(window).width() < 576) {
 		 //    $(".products__btn--watch").click(function(){
 			// 	window.open('https://vimeo.com/239040032', '_blank');
 			// });
-		}else {
-		   	$(".products__btn--watch").click(function(){
-				$(".products__video").css("display", "block");
-			});
-		}
+		// }else {
+		//    	$(".products__btn--watch").click(function(){
+		// 		$(".products__video").css("display", "block");
+		// 	});
+		// }
 	 //   	$(".products__btn--watch").click(function(){
 		// 	$(".products__video").css("display", "block");
 		// });
@@ -251,6 +251,10 @@ Both the HR80T and HR80W feature a patented frictionless micro-motion technology
 	    player.on('play', function() {
 	        console.log('played the video!');
 	    });
+
+	   	$(".products__btn--watch").click(function(){
+			$(".products__video").css("display", "block");
+		});
 
 		$(".products__btn--watch--hr80").click(function(){
 			$("html, body").css("overflow", "hidden");

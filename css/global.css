@@ -402,6 +402,7 @@ q {
 
 .btn--secondary--sm{
 	line-height: 32px;
+	padding: 0 8px 0 8px;
 }
 
 .btn:hover, .btn:focus{
@@ -681,6 +682,21 @@ footer{
 
 .footer__contact a{
 	margin: 16px;
+}
+
+.txt--customerSupport{
+	line-height: 32px;
+}
+
+.customerSupport .flex-container{
+	align-items: center;
+	height: 32px;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.customerSupport .btn{
+	margin-left: 24px;
 }
 
 /*----------------------------------------------

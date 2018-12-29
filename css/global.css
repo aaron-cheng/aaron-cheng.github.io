@@ -400,6 +400,10 @@ q {
 
 }
 
+.btn--secondary--sm{
+	line-height: 32px;
+}
+
 .btn:hover, .btn:focus{
 	color:#fff;
 	opacity: 0.9;

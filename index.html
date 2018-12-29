@@ -54,7 +54,7 @@
 								<li class="disitributors btn"><p>Disitributors</p></li>
 							</ul>
 						</li>
-						<li class="about btn"><p>Team</p></li>
+						<li class="team btn"><p>Team</p></li>
 					</ul>
 				</div>
 				<div class="col-xs-6 visible-xs visible-sm">
@@ -91,7 +91,7 @@
 				<li><p class="disitributors btn--nav--mobile">Disitributors</p></li>
 			</ul>
 		</li>
-		<li><p class="about btn--nav--mobile">Team</p></li>
+		<li><p class="team btn--nav--mobile">Team</p></li>
 	</ul>
 
 	<div class="container-fluid">
@@ -338,7 +338,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid" id="about">
+	<div class="container-fluid" id="team">
 		<div class="row">
 			<div class="col-md-12">	
 				<div class="home__about">
@@ -357,7 +357,7 @@
 	</div>
 
 	<div class="background--differentiator">
-	<div class="container padding--section" id="executives">
+	<div class="container padding--section">
 		<div class="row">
 			<div class="col-md-12">
 				<h2 class="txt--xxl text-center">Management</h2>
@@ -432,7 +432,9 @@
 								</p>
 								<div class="row">
 									<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
-										<div class="btn btn--secondary margin--element_top_xs">JOIN US</div>
+										<a href="careers.html">
+											<div class="btn btn--secondary margin--element_top_xs">JOIN US</div>
+										</a>
 									</div>
 								</div>								
 							</div>
@@ -498,22 +500,22 @@
 
 	<script>	
 	//scroll animate
-	$(".about").click(function(){
-	$('html,body').animate({scrollTop: $("#about").offset().top-48},'slow');
+	$(".team").click(function(){
+	$('html,body').animate({scrollTop: $("#team").offset().top-48},'slow');
+	window.location.hash = "#team";
 	});
 	$(".industries").click(function(){
 	$('html,body').animate({scrollTop: $("#industries").offset().top-48},'slow');
+	window.location.hash = "#industries";
 	});
 	$(".partners").click(function(){
 	$('html,body').animate({scrollTop: $("#partners").offset().top-48},'slow');
+	window.location.hash = "#partners";
 	});
 	$(".disitributors").click(function(){
 	$('html,body').animate({scrollTop: $("#disitributors").offset().top-48},'slow');
+	window.location.hash = "#disitributors";
 	});
-	$(".executives").click(function(){
-	$('html,body').animate({scrollTop: $("#executives").offset().top-48},'slow');
-	});
-
 
 
 	$(".btn--auto--learnMore").click(function(){

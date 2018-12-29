@@ -118,6 +118,16 @@ q{
 	list-style-position:outside;
 }
 
+.txt--bullet_list--order{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.txt--bullet_list--order > li{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
 .txt--xxl{
 	font-size: 32px;
 	line-height: 48px;
@@ -312,6 +322,10 @@ q {
 
 .margin--element_left{
 	margin-left: 70px;
+}
+
+.margin--element_left_sm{
+	margin-left: 24px;
 }
 
 .padding--section{
@@ -864,6 +878,25 @@ footer{
 
 .meta{
 display:none;
+}
+
+.txt--bullet_list--nested .txt--bullet_list > li{
+	margin-left: 16px;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+11. Page Style - Careers
+------------------------------------------------
+----------------------------------------------*/
+.careers__heroContainer{
+	background-image: url("../img/careers/careers-hero@2x.png");
+	width: 100%;
+	height: 392px;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
 }
 
 @media (max-width: 576px) { 
